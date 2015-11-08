@@ -1,0 +1,43 @@
+Jugador
+- Nombre
+- Apellido
+- Cedula
+- foto
+- Equipo (ID)
+- Pais (ID)
+- Posicion (ID)
+
+
+Alineacion
+- Portero
+- 4 defensas
+- 4 medios
+- 2 delanteros
+* Escoger Capitan (que es un bool en jugador)
+
+Estadio
+- nombre
+- capacidad
+- Pais (INT)
+
+Pais
+- Nombre
+- Bandera
+- Continente (ID)
+
+Equipo
+-Nombre
+- Bandera
+- Nombre del Tecnico
+- COnfederacion (ID)
+- Pais (ID)
+- Seleccion del Pais o Equipo regular
+
+Evento
+- Mundial o Torneo Diferente
+- Fecha de Inicio
+-  Checkboxes con confederaciones participantes
+- Nacion o Equipo (ej: Brazil o Real Madrid)
+Segunda Pagina de Evento
+- Seleccionar COnfederacion
+- Lista de Paises
