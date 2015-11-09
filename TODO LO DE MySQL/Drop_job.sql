@@ -1,0 +1,1 @@
+drop event job_bitacora;
