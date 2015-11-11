@@ -436,10 +436,34 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_partido`(pEventID int, pEquipoLocal int, pEquipoVisita int,
 									pEstadio int, pFecha date, Pidgrupo int)
 BEGIN
+
+DECLARE cant_partidos_iguales int;
+
+set cant_partidos_iguales = (SELECT
+  COUNT(partido.idpartido) AS expr1
+FROM partido
+  INNER JOIN grupo
+    ON partido.grupo_idgrupo = grupo.idgrupo
+  INNER JOIN evento
+    ON partido.Evento_idEvento = evento.idEvento
+    AND grupo.Evento_idEvento = evento.idEvento
+WHERE partido.EquipoLocal = pEquipoLocal
+AND partido.EquipoVisita = pEquipoVisita
+AND partido.Evento_idEvento = pEventID
+AND partido.grupo_idgrupo = Pidgrupo);
+
+if cant_partidos_iguales = 0 then
+
 	insert into partido(Evento_idEvento, EquipoLocal, EquipoVisita, Ganador,
     estadio_idestadio, fecha, grupo_idgrupo)
     values(pEventID , pEquipoLocal , pEquipoVisita , 0 ,
 									pEstadio , pFecha, Pidgrupo );
+else 
+	SIGNAL SQLSTATE '45000'
+	SET MESSAGE_TEXT = 'Equipos ya enfrentados';
+
+
+end if;
 END$$
 DELIMITER ;
 
