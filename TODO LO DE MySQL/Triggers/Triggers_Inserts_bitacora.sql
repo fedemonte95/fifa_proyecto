@@ -12,7 +12,7 @@ SET NEW.fecha_creacion = NOW();
 
 CREATE TRIGGER bitacora_timestamp BEFORE INSERT ON bitacora
 FOR EACH ROW
-SET NEW.fecha_creacion = NOW();
+SET NEW.fecha_creacion = CURRENT_TIMESTAMP;
 
 CREATE TRIGGER bitacoraporequipo_timestamp BEFORE INSERT ON bitacoraporequipo
 FOR EACH ROW

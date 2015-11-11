@@ -1,0 +1,458 @@
+<html><head>
+<title>Diccionario FIFO</title>
+<style>
+        td,th {
+        text-align:left;
+        vertical-align:middle;
+        }
+        table {
+        border-collapse: collapse;
+        border: 1px solid;
+        }
+        caption, th, td {
+        padding: .2em .8em;
+        border: 1px solid #000000;
+        }
+        caption {
+        background: #D3D3D3;
+        font-weight: bold;
+        font-size: 1.1em;
+        }
+        th {
+        font-weight: bold;
+        background: #000000;
+        color: white;
+        }
+        td {
+        background: #FFFFFF;
+        }
+        </style>
+      </head>
+     <body>
+<h1>Diccionario de Datos FIFO Proyecto II Bases de Datos I</h1>
+<a id="home">Table List </a><br /><ul>
+<li><a href="#accion">accion </a></li>
+<li><a href="#administrador">administrador </a></li>
+<li><a href="#alineacion">alineacion </a></li>
+<li><a href="#bitacora">bitacora </a></li>
+<li><a href="#bitacoraporequipo">bitacoraporequipo </a></li>
+<li><a href="#catalogo_de_acciones">catalogo_de_acciones </a></li>
+<li><a href="#categoria_grupo">categoria_grupo </a></li>
+<li><a href="#confederaciones">confederaciones </a></li>
+<li><a href="#continente">continente </a></li>
+<li><a href="#equipo">equipo </a></li>
+<li><a href="#estadio">estadio </a></li>
+<li><a href="#evento">evento </a></li>
+<li><a href="#evento_has_confederaciones">evento_has_confederaciones </a></li>
+<li><a href="#evento_has_equipo">evento_has_equipo </a></li>
+<li><a href="#grupo">grupo </a></li>
+<li><a href="#jugador">jugador </a></li>
+<li><a href="#pais">pais </a></li>
+<li><a href="#partido">partido </a></li>
+<li><a href="#posicion">posicion </a></li>
+<li><a href="#sede">sede </a></li>
+<li><a href="#tipo_eventos">tipo_eventos </a></li>
+</ul>
+<a id="accion"></a><table style="width:100%"><caption>Table: accion </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idAccion</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>jugador_idjugador</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>partido_idpartido</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>tiempo</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>idCatalogo_de_Acciones</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>equipo_idequipo</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="administrador"></a><table style="width:100%"><caption>Table: administrador </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idadministrador</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>password</td><td>VARBINARY(200)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="alineacion"></a><table style="width:100%"><caption>Table: alineacion </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idalineacion</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>equipo_idequipo</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="bitacora"></a><table style="width:100%"><caption>Table: bitacora </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idbitacora</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>TIMESTAMP</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>pj</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>pg</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>pe</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>pp</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>GF</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>gc</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>grupo_idgrupo</td><td>INT(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>equipo_idequipo</td><td>INT(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="bitacoraporequipo"></a><table style="width:100%"><caption>Table: bitacoraporequipo </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idbitacoraPorEquipo</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>pj</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>pg</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>pe</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>pp</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>GF</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>gc</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>grupo_idgrupo</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>equipo_idequipo</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="catalogo_de_acciones"></a><table style="width:100%"><caption>Table: catalogo_de_acciones </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idCatalogo_de_Acciones</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="categoria_grupo"></a><table style="width:100%"><caption>Table: categoria_grupo </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idCategoria_Grupo</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="confederaciones"></a><table style="width:100%"><caption>Table: confederaciones </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idconfederaciones</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>icono</td><td>BLOB</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="continente"></a><table style="width:100%"><caption>Table: continente </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idContinente</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="equipo"></a><table style="width:100%"><caption>Table: equipo </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idequipo</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>bandera</td><td>BLOB</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>tecnico</td><td>VARCHAR(95)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>confederaciones_idconfederaciones</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>Pais_idPais</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="estadio"></a><table style="width:100%"><caption>Table: estadio </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idestadio</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Pais_idPais</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>capacidad</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="evento"></a><table style="width:100%"><caption>Table: evento </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idEvento</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>fecha_inicio</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>administrador_idadministrador</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>cantidad_equipos</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Tipo_Eventos_idTipo_Eventos</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="evento_has_confederaciones"></a><table style="width:100%"><caption>Table: evento_has_confederaciones </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>Evento_idEvento</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>confederaciones_idconfederaciones</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="evento_has_equipo"></a><table style="width:100%"><caption>Table: evento_has_equipo </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>Evento_idEvento</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>equipo_idequipo</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>ganador</td><td>TINYINT(1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>segundo_lugar</td><td>TINYINT(1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="grupo"></a><table style="width:100%"><caption>Table: grupo </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idgrupo</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>Evento_idEvento</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Categoria_Grupo_idCategoria_Grupo</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>id_nextgrupo</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="jugador"></a><table style="width:100%"><caption>Table: jugador </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idjugador</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>numeroCamiseta</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>apellidos</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>cedula</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>foto</td><td>BLOB</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>equipo_idequipo</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>suspendido</td><td>TINYINT(1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>alineacion_idalineacion</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td>NULL</td><td></td></tr>
+<tr><td>Pais_idPais</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>capitan</td><td>TINYINT(1)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>posicion_idposicion</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="pais"></a><table style="width:100%"><caption>Table: pais </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idPais</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>bandera</td><td>BLOB</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Continente_idContinente</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="partido"></a><table style="width:100%"><caption>Table: partido </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idpartido</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>Evento_idEvento</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>Grupo_idGrupo</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>EquipoLocal</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>EquipoVisita</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>Ganador</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>estadio_idestadio</td><td>INT(11)</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>fecha</td><td>DATETIME</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="posicion"></a><table style="width:100%"><caption>Table: posicion </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idposicion</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="sede"></a><table style="width:100%"><caption>Table: sede </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>Evento_idEvento</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>Pais_idPais</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="tipo_eventos"></a><table style="width:100%"><caption>Table: tipo_eventos </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>idTipo_Eventos</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nombre</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Creacion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>Fecha_Edicion</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+</body></html>
