@@ -5,25 +5,27 @@ call insert_continente('Oceania');
 call insert_continente('Sudamerica');*/
 
 
-call insert_categoria_grupo('categoria_grupo');
 call insert_categoria_grupo('First Round');
+call insert_categoria_grupo('Second Round');
 call insert_categoria_grupo('Round of 16');
 call insert_categoria_grupo('Quarterfinals');
 call insert_categoria_grupo('Semifinals');
 call insert_categoria_grupo('Final');
-call insert_categoria_grupo('catalogo_de_acciones');
-call insert_categoria_grupo('Goal');
-call insert_categoria_grupo('Red Card');
-call insert_categoria_grupo('Yellow Card');
-call insert_categoria_grupo('Save');
-call insert_categoria_grupo('Offside');
-call insert_categoria_grupo('Corner');
-call insert_categoria_grupo('Posicion');
-call insert_categoria_grupo('Goalkeeper');
-call insert_categoria_grupo('Defender');
-call insert_categoria_grupo('Midfielder');
-call insert_categoria_grupo('Striker');
 
+/*catalogo_de_acciones*/
+call insert_catalogo_de_acciones('Goal');
+call insert_catalogo_de_acciones('Red Card');
+call insert_catalogo_de_acciones('Yellow Card');
+call insert_catalogo_de_acciones('Save');
+call insert_catalogo_de_acciones('Offside');
+call insert_catalogo_de_acciones('Corner');
+
+/*'Posicion'*/
+
+call insert_posicion('Goalkeeper');
+call insert_posicion('Defender');
+call insert_posicion('Midfielder');
+call insert_posicion('Striker');
 
 /*No estan terminados xD*/
 call insertar_pais('Afganistan');
